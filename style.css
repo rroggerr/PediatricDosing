@@ -9,6 +9,7 @@ body{
 	height: 60px;
 }
 
+
 #titletext {
 	font-size: 200%;
 	color: #ffffff;
@@ -20,8 +21,19 @@ body{
 }
 
 .input-group {
-	width: 50%;
+	width: 60%;
 	margin: auto;
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
+
+@media screen and (max-width: 650px) {
+/* applies only if the screen is narrower than 650px */
+	.input-group {
+	width: 90%;
+	margin: auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	}
+}
+
