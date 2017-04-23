@@ -1,5 +1,12 @@
-$( "#drug-search" ).autocomplete({
-      source: drugnames
-    });
+window.onload = init();
+var drugnames;
 
-var drugnames = ["opium", "heroine"]
+function init() {
+	drugnames = ["opium", "heroine"];
+
+	$("#drug-search").autocomplete({
+    	source: drugnames
+    });
+    
+}
+
