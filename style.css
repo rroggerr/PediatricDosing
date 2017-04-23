@@ -52,7 +52,9 @@ body{
 
 @media screen and (max-width: 650px) {
 /* applies only if the screen is narrower than 650px */
-	
+	.panel {
+		width:90%;
+	}
 
 	.inputbox {
 	width: 90%;
