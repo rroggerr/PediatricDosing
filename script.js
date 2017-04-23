@@ -1,5 +1,5 @@
 
-var drugnames = ["opium", "heroine","cocaine","marijuana"];
+var drugnames = ["Opium", "Heroine","Cocaine","Marijuana", "Acid"];
 
 var input = document.getElementById("drug-search");
 var options=[];
@@ -11,4 +11,8 @@ var states = new Bloodhound({
   local: drugnames
 });
 
+function clicksearch(){
+	var textval = $('.typeahead').typeahead('val');
+	document.getElementById("selected-drug-name").innerHTML=textval;
+}
 

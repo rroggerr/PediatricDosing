@@ -22,14 +22,13 @@ body{
 
 #searchbutton {
 	width: 50%;
-	margin: auto;
-	margin-bottom: 25px;
+	margin: 10px auto 25px auto;
 }
 
 .inputbox{
 	width: 50%;
 	height: 100%;
-	margin: auto;
+	margin: 10px auto auto auto;
 	padding-top: 25px;
 	padding-bottom: 10px;
 }
@@ -38,6 +37,14 @@ body{
 	width : 50%;
 	margin: auto;
 	margin-bottom: 25px;
+}
+
+#selected-drug-name{
+	min-height: 50px;
+}
+
+#selected-drug-dosage{
+	min-height: 120px;
 }
 
 @media screen and (max-width: 650px) {
