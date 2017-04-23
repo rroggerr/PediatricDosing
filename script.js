@@ -4,9 +4,9 @@ var drugnames;
 function init() {
 	drugnames = ["opium", "heroine"];
 
-	$("#drug-search").autocomplete({
+	function() {$("#drug-search").autocomplete({
     	source: drugnames
-    });
+    })}
     
 }
 
