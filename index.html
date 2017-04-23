@@ -3,25 +3,58 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<meta name="viewport" content='width=device-width'>
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="bootstrap3-typeahead.min.js"></script>
-	<script src="script.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	<title>Pediatric Dosing</title>
+		<meta name="viewport" content='width=device-width'>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="typeahead.bundle.min.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+
+		<title>Pediatric Dosing</title>
 	</head>
 	<body>
 		<div id="topbar"> 
-			<p id="titletext" class=h1>Pediatric Dosing</p>
+			<p id="titletext" class=h1> Pediatric Dosing </p>
 		</div>
 
-		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon3">Drug Name:</span>
-		  <input type="text" class="form-control" id="drug-search" autocomplete="off" placeholder="Search Pediatric Drug Name" data-provide="typeahead">
+		<div class="input-group inputbox">
+		  <input type="text" class="form-control typeahead" id="drug-search" autocomplete="off" placeholder="Search Pediatric Drug Name">
+		  <script>
+			$('.typeahead').typeahead({
+		  hint: false,
+		  highlight: true,
+		  minLength: 1
+		},
+		{
+		  name: 'states',
+		  source: states,
+		});
+		  </script>
 		</div>
-		
+		<div id="searchbutton" class="btn btn-primary btn-block">Search</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3  class="panel-title">Drug Name:</h3>
+		  </div>
+		  <div id="selected-drug" class="panel-body">
+		    Drug Name Goes Here
+		  </div>
+		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 id="selected-drug" class="panel-title">Dosage Info:</h3>
+		  </div>
+		  <div id="selected-drug-dosage" class="panel-body">
+		    Dosage <br>
+		    Info  <br>
+		    Goes <br>
+		    Here <br>
+		  </div>
+		</div>
+				
 
 	</body>
 
