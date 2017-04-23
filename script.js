@@ -1,12 +1,17 @@
 window.onload = init();
-var drugnames;
+var drugnameslist;
 
 function init() {
-	drugnames = ["opium", "heroine"];
+	drugnameslist = ["opium", "heroine", "cocaine"];
 
-	function() {$("#drug-search").autocomplete({
-    	source: drugnames
-    })}
-    
 }
+
+// new typeahead
+
+
+
+$("#drug-search").typeahead({
+	source:drugnameslist,
+	fitToElement:true
+});
 
