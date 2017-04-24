@@ -8,6 +8,11 @@ body{
 	bottom:20px;
 }
 
+a{
+  text-align: center;
+  /*margin-left: 45%;*/
+}
+
 #topbar {
 	background-color: #172791;
 	width: 100%;
@@ -49,7 +54,11 @@ body{
 }
 
 #lower-panel{
-	margin-bottom: 45px;
+	margin-bottom: 25px;
+}
+
+#bottom-panel {
+  margin-bottom: 45px;
 }
 
 #selected-drug-name{
