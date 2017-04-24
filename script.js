@@ -16,3 +16,20 @@ function clicksearch(){
 	document.getElementById("selected-drug-name").innerHTML=textval;
 }
 
+function pdselect(){
+	var pdbtn =document.getElementById("PDselector");
+	var ivbtn =document.getElementById("IVselector");
+	pdbtn.classList.add("active");
+	ivbtn.classList.remove("active");
+	document.getElementById("titletext").innerHTML="Pediatric Dosing";
+}
+
+
+function ivselect(){
+	var pdbtn =document.getElementById("PDselector");
+	var ivbtn =document.getElementById("IVselector");
+	ivbtn.classList.add("active");
+	pdbtn.classList.remove("active");
+	document.getElementById("titletext").innerHTML="IV Reconstitution";
+}
+

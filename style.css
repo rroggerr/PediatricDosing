@@ -78,6 +78,11 @@ body{
 	background-color: #172791;
 }
 
+.tab-selector {
+	width: 45%;
+	margin: 25px 2% 0px 2%;
+}
+
 @media screen and (max-width: 650px) {
 /* applies only if the screen is narrower than 650px */
 	.panel {
