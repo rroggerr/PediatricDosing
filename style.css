@@ -98,6 +98,10 @@ a{
 		width:90%;
 	}
 
+  #wrapper {
+    margin: 0px;
+  }
+
 	.inputbox {
 	width: 90%;
 	height: 100%;
