@@ -1,5 +1,11 @@
+html{
+	min-height: 100%;
+}
+
 body{
-	/*background-color: #d4d4d4;*/
+	min-height: 100%;
+	background-color: #dfdfdf;
+	bottom:20px;
 }
 
 #topbar {
@@ -42,12 +48,34 @@ body{
 	margin-bottom: 25px;
 }
 
+#lower-panel{
+	margin-bottom: 45px;
+}
+
 #selected-drug-name{
 	min-height: 50px;
 }
 
 #selected-drug-dosage{
 	min-height: 120px;
+}
+
+#wrapper {
+	background-color: white;
+	height: 100%;
+	margin: 10px 5% 5% 5%;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #cecece;
+	border-width: 1px;
+}
+
+.floating-circle{
+	position: absolute;
+	height:60px;
+	width: 60px;
+	border-radius: 30px;
+	background-color: #172791;
 }
 
 @media screen and (max-width: 650px) {

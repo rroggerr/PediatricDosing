@@ -18,42 +18,47 @@
 			<p id="titletext" class=h1> Pediatric Dosing </p>
 		</div>
 
-		<div class="input-group inputbox">
-		  <input type="text" class="form-control typeahead" id="drug-search" autocomplete="off" placeholder="Search Pediatric Drug Name">
-		  <script>
-			$('.typeahead').typeahead({
-		  hint: false,
-		  highlight: true,
-		  minLength: 1
-		},
-		{
-		  name: 'states',
-		  source: states,
-		});
-		  </script>
-		</div>
-		<div id="searchbutton" class="btn btn-primary btn-block" onclick="clicksearch()">Search</div>
+		<div id="wrapper">
+			 <div class="input-group inputbox">
+			  <input type="text" class="form-control typeahead" id="drug-search" autocomplete="off" placeholder="Type In Drug Name">
+			  <script>
+				$('.typeahead').typeahead({
+			  hint: false,
+			  highlight: true,
+			  minLength: 1
+			},
+			{
+			  name: 'states',
+			  source: states,
+			});
+			  </script>
+			</div>
+			<div id="searchbutton" class="btn btn-primary btn-block" onclick="clicksearch()">Search</div>
 
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3  class="panel-title">Drug Name:</h3>
-		  </div>
-		  <div id="selected-drug-name" class="panel-body">
-		    Drug Name Goes Here
-		  </div>
+			<div class="panel panel-default" id="upper-panel">
+			  <div class="panel-heading">
+			    <h3  class="panel-title">Drug Name:</h3>
+			  </div>
+			  <div id="selected-drug-name" class="panel-body">
+			    Drug Name Goes Here
+			  </div>
+			</div>
+
+			<div class="panel panel-default" id="lower-panel">
+			  <div class="panel-heading">
+			    <h3 id="selected-drug" class="panel-title">Dosage Info:</h3>
+			  </div>
+			  <div id="selected-drug-dosage" class="panel-body">
+			    Dosage <br>
+			    Info  <br>
+			    Goes <br>
+			    Here <br>
+			  </div>
+			</div>
 		</div>
 
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 id="selected-drug" class="panel-title">Dosage Info:</h3>
-		  </div>
-		  <div id="selected-drug-dosage" class="panel-body">
-		    Dosage <br>
-		    Info  <br>
-		    Goes <br>
-		    Here <br>
-		  </div>
-		</div>
+
+
 				
 
 	</body>
