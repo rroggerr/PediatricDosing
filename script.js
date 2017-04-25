@@ -1,5 +1,4 @@
 
-var drugnames = ["Opium", "Heroine","Cocaine","Marijuana", "Acid"];
 var input = document.getElementById("drug-search");
 var PNames=[];
 var states;
@@ -49,6 +48,7 @@ function init_TA(){
 			  name: 'states',
 			  source: states
 			});
+	document.getElementById("drug-search").placeholder="Type in drug name";
 }
 
 
@@ -59,6 +59,20 @@ function init_TA(){
 function clicksearch(){
 	var textval = $(".typeahead").typeahead("val");
 	document.getElementById("selected-drug-name").innerHTML=textval;
+	var dosagebox =document.getElementById("selected-drug-dosage");
+	for (var i = 0; i < parsed_json.length; i++) {
+		if (parsed_json[i].PName === textval){
+			var altdose = parsed_json[i].AltDosage;
+			if (altdose==""){
+				dosagebox.innerHTML = parsed_json[i].DosageChildren;
+			}
+			else {
+				dosagebox.innerHTML = altdose;
+			}
+			break;
+		}
+	};
+
 }
 
 function pdselect(){
