@@ -7,7 +7,7 @@ var parsed_json;
 
 // Load in CSV into JSON Object Here
 
-Papa.parse("http://rawgit.com/rroggerr/PharmaRef/master/PD.csv", {
+Papa.parse("https://rawgit.com/rroggerr/PharmaRef/master/PD.csv", {
 	download: true,
 	header: true,
 	complete: function(results) {
