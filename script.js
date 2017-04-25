@@ -1,11 +1,18 @@
 
 var drugnames = ["Opium", "Heroine","Cocaine","Marijuana", "Acid"];
+var csv_readin;
+var parsed_json;
 
 // Load in CSV into JSON Object Here
 
-
-
-
+Papa.parse("http://rawgit.com/rroggerr/PharmaRef/master/PD.csv", {
+	download: true,
+	header: true,
+	complete: function(results) {
+        parsed_json = results.data;
+        console.log("parsed");
+      }
+})
 
 var input = document.getElementById("drug-search");
 var options=[];
