@@ -79,7 +79,7 @@ function clicksearch(){
 	var dosagebox =document.getElementById("selected-drug-dosage");
 	for (var i = 0; i < parsed_json.length; i++) {
 		if (parsed_json[i].PName === textval || parsed_json[i].Ingredients === textval){
-			document.getElementById("selected-drug-name").innerHTML=parsed_json[i].PName;
+			document.getElementById("selected-drug-name").innerHTML=parsed_json[i].Brand.concat(" ").concat(parsed_json[i].PName);
 			var altdose = parsed_json[i].AltDosage;
 			if (altdose==""){
 				dosagebox.innerHTML = parsed_json[i].DosageChildren;
