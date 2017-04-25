@@ -119,6 +119,12 @@ a{
 
 /*   TYPE AHEAD styles
 */
+
+.tt-selectable {
+  max-width: 100%;
+  overflow:hidden;
+}
+
 span.twitter-typeahead .tt-menu,
 span.twitter-typeahead .tt-dropdown-menu {
   position: absolute;
@@ -143,6 +149,7 @@ span.twitter-typeahead .tt-dropdown-menu {
 }
 span.twitter-typeahead .tt-suggestion {
   display: block;
+  max-width: 100%;
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
