@@ -1,6 +1,12 @@
 
 var drugnames = ["Opium", "Heroine","Cocaine","Marijuana", "Acid"];
 
+// Load in CSV into JSON Object Here
+
+
+
+
+
 var input = document.getElementById("drug-search");
 var options=[];
 
@@ -12,7 +18,7 @@ var states = new Bloodhound({
 });
 
 function clicksearch(){
-	var textval = $('.typeahead').typeahead('val');
+	var textval = $(".typeahead").typeahead("val");
 	document.getElementById("selected-drug-name").innerHTML=textval;
 }
 
