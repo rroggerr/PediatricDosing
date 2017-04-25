@@ -1,6 +1,9 @@
 
 var drugnames = ["Opium", "Heroine","Cocaine","Marijuana", "Acid"];
-var csv_readin;
+var input = document.getElementById("drug-search");
+var PNames=[];
+var states;
+var unparsed;
 var parsed_json;
 
 // Load in CSV into JSON Object Here
@@ -11,18 +14,47 @@ Papa.parse("http://rawgit.com/rroggerr/PharmaRef/master/PD.csv", {
 	complete: function(results) {
         parsed_json = results.data;
         console.log("parsed");
-      }
+        processData(parsed_json);
+        init_TA();
+      },
+    error: function() {
+    	console.log("Papaparse Error");
+    }
+
 })
 
-var input = document.getElementById("drug-search");
-var options=[];
+function processData(p_json){
+	for (var i = 1; i < p_json.length; i++){
+		var tmp = p_json[i].PName;
+	    PNames.push(tmp);
+	}
+}
 
-var states = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.whitespace,
-  queryTokenizer: Bloodhound.tokenizers.whitespace,
-  // `states` is an array of state names defined in "The Basics"
-  local: drugnames
-});
+function init_TA(){
+	// Bloodhound Autosuggest engine config
+
+	states = new Bloodhound({
+	  datumTokenizer: Bloodhound.tokenizers.whitespace,
+	  queryTokenizer: Bloodhound.tokenizers.whitespace,
+	  // `states` is an array of state names defined in "The Basics"
+	  local: PNames
+	});
+
+	$('.typeahead').typeahead({
+			  hint: false,
+			  highlight: true,
+			  minLength: 1
+			},
+			{
+			  name: 'states',
+			  source: states
+			});
+}
+
+
+
+
+
 
 function clicksearch(){
 	var textval = $(".typeahead").typeahead("val");
