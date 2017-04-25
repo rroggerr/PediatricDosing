@@ -1,5 +1,4 @@
 
-var input = document.getElementById("drug-search");
 var PNames=[];
 var states;
 var unparsed;
@@ -29,6 +28,8 @@ function processData(p_json){
 	}
 }
 
+// Initialize to be called
+
 function init_TA(){
 	// Bloodhound Autosuggest engine config
 
@@ -50,11 +51,6 @@ function init_TA(){
 			});
 	document.getElementById("drug-search").placeholder="Type in drug name";
 }
-
-
-
-
-
 
 function clicksearch(){
 	var textval = $(".typeahead").typeahead("val");
