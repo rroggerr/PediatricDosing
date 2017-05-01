@@ -6,7 +6,6 @@ var unparsed;
 var parsed_json;
 
 // Load in CSV into JSON Object Here
-
 Papa.parse("https://rawgit.com/rroggerr/PharmaRef/master/PD.csv", {
 	download: true,
 	header: true,
@@ -18,8 +17,8 @@ Papa.parse("https://rawgit.com/rroggerr/PharmaRef/master/PD.csv", {
       },
     error: function() {
     	console.log("Papaparse Error");
+    	document.getElementById("error-wrapper").innerHTML='<div id="error"></div>';
     }
-
 })
 
 function processData(p_json){

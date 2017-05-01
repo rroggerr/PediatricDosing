@@ -31,6 +31,15 @@ a{
   position: fixed;
 }
 
+#error{
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 1002;
+  top:0px;
+  position: fixed;
+}
+
 .btn-primary{
 	background-color: #286bfe;
 }
@@ -186,7 +195,6 @@ a{
   max-width: 100%;
   overflow-x: auto;
 }
-
 span.twitter-typeahead .tt-menu,
 span.twitter-typeahead .tt-dropdown-menu {
   position: absolute;
@@ -219,6 +227,7 @@ span.twitter-typeahead .tt-suggestion {
   color: #333333;
   white-space: nowrap;
 }
+
 span.twitter-typeahead .tt-suggestion.tt-cursor,
 span.twitter-typeahead .tt-suggestion:hover,
 span.twitter-typeahead .tt-suggestion:focus {
