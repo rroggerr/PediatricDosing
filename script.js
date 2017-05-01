@@ -72,6 +72,7 @@ function init_TA(){
 			}
 			);
 	document.getElementById("drug-search").placeholder="Type in drug name";
+	pdselect();
 }
 
 function clicksearch(){
