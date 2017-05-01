@@ -1,3 +1,7 @@
+* {
+  font-family: Helvetica, Calibri, sans-serif;
+}
+
 html{
 	min-height: 100%;
 }
@@ -11,6 +15,14 @@ body{
 a{
   text-align: center;
   /*margin-left: 45%;*/
+}
+
+#PDselectortab {
+  background-color: #80dfff;
+}
+
+#IVselectortab {
+  background-color: #99bbff;
 }
 
 #topbar {
@@ -102,7 +114,7 @@ a{
 	}
 
   #wrapper {
-    margin: 60px 0px 0px 0px;
+    margin: 95px 0px 0px 0px;
   }
 
 	.inputbox {
