@@ -10,6 +10,7 @@
 		<script src="papaparse.min.js"></script>
 		<script src="script.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    	
 		<link rel="stylesheet" href="style.css">
 
 		<title>Pharma&#8478ef</title>
@@ -21,10 +22,9 @@
 
 		<div id="wrapper">
 
-			<ul class="nav nav-tabs">
-			  <li class="tab-selector active" id="PDselector" onclick="pdselect()"><a id="PDselectortab" data-toggle="tab">Pediatric Dosing</a></li>
-			  <li class="tab-selector" id="IVselector" onclick="ivselect()"><a id="IVselectortab" data-toggle="tab">IV Reconstitution</a></li>
-			</ul>
+
+			<div id="page-button-bar1" class="button-bar" data-componentid="button-bar1" data-tap-disabled="true"><div id="PDselector" style="font-weight:300;" class="button button-stable button-normal button-block button-block-left selected" onclick="pdselect()">Pediatric Dosing</div><div id="IVselector" style="font-weight:300;" class="button button-stable button-normal button-block button-block-right" onclick="ivselect()">IV Reconstitution</div></div>
+
 			 <div class="input-group inputbox">
 			  <input type="text" class="form-control typeahead" id="drug-search" autocomplete="off" placeholder="Retrieving Drug List...">
 			</div>

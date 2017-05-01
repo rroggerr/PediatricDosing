@@ -98,7 +98,7 @@ function pdselect(){
 	var ivbtn =document.getElementById("IVselector");
 	pdbtn.classList.add("active");
 	ivbtn.classList.remove("active");
-	document.getElementById("titletext").innerHTML="Pediatric Dosing";
+	//document.getElementById("titletext").innerHTML="Pediatric Dosing";
 }
 
 
@@ -107,6 +107,6 @@ function ivselect(){
 	var ivbtn =document.getElementById("IVselector");
 	ivbtn.classList.add("active");
 	pdbtn.classList.remove("active");
-	document.getElementById("titletext").innerHTML="IV Reconstitution";
+	//document.getElementById("titletext").innerHTML="IV Reconstitution";
 }
 
