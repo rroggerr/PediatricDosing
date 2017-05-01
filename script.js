@@ -1,7 +1,7 @@
 
 var PNames=[];
 var Ingredients =[];
-var states;
+var pnames, ings; //Bloodhound for prod_names, ingredients
 var unparsed;
 var parsed_json;
 
@@ -36,17 +36,15 @@ function processData(p_json){
 function init_TA(){
 	// Bloodhound Autosuggest engine config
 
-	states = new Bloodhound({
+	pnames = new Bloodhound({
 	  datumTokenizer: Bloodhound.tokenizers.whitespace,
 	  queryTokenizer: Bloodhound.tokenizers.whitespace,
-	  // `states` is an array of state names defined in "The Basics"
 	  local: PNames
 	});
 
 	ings = new Bloodhound({
 	  datumTokenizer: Bloodhound.tokenizers.whitespace,
 	  queryTokenizer: Bloodhound.tokenizers.whitespace,
-	  // `states` is an array of state names defined in "The Basics"
 	  local: Ingredients
 	});
 
@@ -56,8 +54,8 @@ function init_TA(){
 			  minLength: 1
 			},
 			{
-			  name: 'states',
-			  source: states,
+			  name: 'pnames',
+			  source: pnames,
 			  templates: {
 						    header: '<h5 class="hname">&nbsp;&nbsp;Product Names: </h5>'
 						  }
@@ -68,7 +66,6 @@ function init_TA(){
 			  templates: {
 						    header: '<h5 class="hname">&nbsp;&nbsp;Ingredients: </h5>'
 						  }
-
 			}
 			);
 	document.getElementById("drug-search").placeholder="Type in drug name";
@@ -93,7 +90,6 @@ function clicksearch(){
 			break;
 		}
 	};
-
 }
 
 function pdselect(){
