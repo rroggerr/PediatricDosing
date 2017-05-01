@@ -181,7 +181,7 @@ a{
 
 .tt-selectable {
   max-width: 100%;
-  overflow:hidden;
+  overflow-x: auto;
 }
 
 span.twitter-typeahead .tt-menu,
