@@ -62,6 +62,7 @@ a{
 
 .button-block {
   font-size: 14px;
+  font-weight: 300;
   text-align: center;
   background-color: #f8f8f8;
   color: #444;
@@ -79,14 +80,8 @@ a{
 
 .active {
   background-color: #d1d1d1;
-  font-weight: 700;
+  font-weight: 500;
 } 
-
-.button-block:hover {
-  background-color: #d1d1d1;
-  font-weight: 700;
-}
-
 
 .button-block-left {
   border-right-width: 0px;

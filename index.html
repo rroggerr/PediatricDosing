@@ -4,7 +4,7 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content='width=device-width'>
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="typeahead.bundle.min.js"></script>
 		<script src="papaparse.min.js"></script>
@@ -23,7 +23,10 @@
 		<div id="wrapper">
 
 
-			<div id="page-button-bar1" class="button-bar" data-componentid="button-bar1" data-tap-disabled="true"><div id="PDselector" style="font-weight:300;" class="button button-stable button-normal button-block button-block-left selected" onclick="pdselect()">Pediatric Dosing</div><div id="IVselector" style="font-weight:300;" class="button button-stable button-normal button-block button-block-right" onclick="ivselect()">IV Reconstitution</div></div>
+			<div id="page-button-bar1" class="button-bar">
+				<div id="PDselector" class="button button-stable button-normal button-block button-block-left selected" onclick="pdselect()">Pediatric Dosing</div>
+				<div id="IVselector" class="button button-stable button-normal button-block button-block-right" onclick="ivselect()">IV Reconstitution</div>
+			</div>
 
 			 <div class="input-group inputbox">
 			  <input type="text" class="form-control typeahead" id="drug-search" autocomplete="off" placeholder="Retrieving Drug List...">
