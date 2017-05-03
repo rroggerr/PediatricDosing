@@ -71,6 +71,14 @@ function init_TA(){
 	pdselect();
 }
 
+function clearsearch(){
+	$('.typeahead').typeahead('val', "");
+	document.getElementById("drug-brand").innerHTML="";
+	document.getElementById("drug-pname").innerHTML="";
+	document.getElementById("drug-gname").innerHTML="";
+	document.getElementById("selected-drug-dosage").innerHTML="";
+}
+
 function clicksearch(){
 	var textval = $(".typeahead").typeahead("val");
 	// Make sure not empty

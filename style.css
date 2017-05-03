@@ -54,9 +54,14 @@ a{
 	margin:auto auto auto auto;
 }
 
-#searchbutton {
+#searchbutton{
 	width: 50%;
-	margin: 10px auto 25px auto;
+	margin: 0px auto 10px auto;
+}
+
+#clearbutton{
+  width: 50%;
+  margin: 10px auto 25px auto;
 }
 
 #searchbutton:hover {
@@ -66,9 +71,9 @@ a{
 .inputbox{
 	width: 50%;
 	height: 100%;
-	margin: 10px auto auto auto;
-	padding-top: 25px;
-	padding-bottom: 10px;
+	margin: auto auto auto auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .panel {
@@ -172,18 +177,23 @@ a{
   	width: 90%;
   	height: 100%;
   	margin: auto;
-  	padding-top: 25px;
-  	padding-bottom: 10px;
+  	padding-top: 15px;
+  	padding-bottom: 15px;
 	}
-	#searchbutton {
+	#searchbutton{
   	width: 90%;
-  	margin: auto;
-  	margin-bottom: 25px;
+  	margin: auto auto 10 auto;
   }
+
+  #clearbutton{
+    width: 90%;
+    margin: auto auto 20 auto;
+  }
+
   .button-bar{
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
 }
