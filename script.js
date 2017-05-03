@@ -73,22 +73,30 @@ function init_TA(){
 
 function clicksearch(){
 	var textval = $(".typeahead").typeahead("val");
-	var dosagebox =document.getElementById("selected-drug-dosage");
-	for (var i = 0; i < parsed_json.length; i++) {
-		if (parsed_json[i].PName === textval || parsed_json[i].Ingredients === textval){
-			document.getElementById("drug-brand").innerHTML=parsed_json[i].Brand;
-			document.getElementById("drug-pname").innerHTML=parsed_json[i].PName;
-			document.getElementById("drug-gname").innerHTML=parsed_json[i].Ingredients;
-			var altdose = parsed_json[i].AltDosage;
-			if (altdose==""){
-				dosagebox.innerHTML = parsed_json[i].DosageChildren;
+	// Make sure not empty
+	if (textval ===""){
+	}
+	else {
+		var dosagebox =document.getElementById("selected-drug-dosage");
+		for (var i = 0; i < parsed_json.length; i++) {
+			if (parsed_json[i].PName === textval || parsed_json[i].Ingredients === textval){
+				document.getElementById("drug-brand").innerHTML=parsed_json[i].Brand;
+				document.getElementById("drug-pname").innerHTML=parsed_json[i].PName;
+				document.getElementById("drug-gname").innerHTML=parsed_json[i].Ingredients;
+				var altdose = parsed_json[i].AltDosage;
+				// Altdose --> DosageChild
+				if (altdose==""){
+					dosagebox.innerHTML = parsed_json[i].DosageChildren;
+				}
+				else {
+					dosagebox.innerHTML = altdose;
+				}
+				break;
 			}
-			else {
-				dosagebox.innerHTML = altdose;
-			}
-			break;
 		}
-	};
+	}
+
+	
 }
 
 function pdselect(){
